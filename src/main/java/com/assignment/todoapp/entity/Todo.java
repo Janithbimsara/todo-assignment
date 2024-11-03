@@ -15,6 +15,10 @@ public class Todo {
     private LocalDate dueDate;
     private Boolean completed = false;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
     // Constructors, Getters, and Setters
     public Todo() {}
 
